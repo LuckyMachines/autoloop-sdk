@@ -7,7 +7,14 @@
   "files": ["dist"],
   "scripts": {
     "build": "tsc",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "registry:set": "node scripts/registry-config.cjs",
+    "registry:show": "node scripts/registry-config.cjs show",
+    "registry:local": "node scripts/registry-config.cjs local",
+    "registry:staging": "node scripts/registry-config.cjs staging",
+    "registry:prod": "node scripts/registry-config.cjs prod",
+    "registry:ping": "node scripts/registry-config.cjs ping",
+    "publish:registry": "node scripts/publish-registry.cjs"
   },
   "peerDependencies": {
     "viem": ">=2.0.0"

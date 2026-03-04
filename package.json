@@ -1,0 +1,20 @@
+{
+  "name": "@luckymachines/autoloop-sdk",
+  "version": "0.1.0",
+  "description": "TypeScript SDK for interacting with AutoLoop contracts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "viem": ">=2.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "viem": "^2.46.0"
+  },
+  "license": "MIT"
+}

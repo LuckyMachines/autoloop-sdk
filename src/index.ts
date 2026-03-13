@@ -3,6 +3,7 @@ export {
   autoLoopRegistryABI,
   autoLoopRegistrarABI,
   autoLoopCompatibleInterfaceABI,
+  autoLoopHybridVRFCompatibleABI,
 } from "./abis";
 export { getDeployment, DEPLOYMENTS, type Deployment } from "./addresses";
 export {

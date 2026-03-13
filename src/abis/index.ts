@@ -2385,3 +2385,274 @@ export const autoLoopCompatibleInterfaceABI = [
     stateMutability: "view",
   },
 ] as const;
+
+export const autoLoopHybridVRFCompatibleABI = [
+  {
+    type: "function",
+    name: "HYBRID_VRF_INTERFACE_ID",
+    inputs: [],
+    outputs: [
+      {
+        name: "",
+        type: "bytes4",
+        internalType: "bytes4",
+      },
+    ],
+    stateMutability: "view",
+  },
+  {
+    type: "function",
+    name: "VRF_INTERFACE_ID",
+    inputs: [],
+    outputs: [
+      {
+        name: "",
+        type: "bytes4",
+        internalType: "bytes4",
+      },
+    ],
+    stateMutability: "view",
+  },
+  {
+    type: "function",
+    name: "VRF_VERSION",
+    inputs: [],
+    outputs: [
+      {
+        name: "",
+        type: "uint8",
+        internalType: "uint8",
+      },
+    ],
+    stateMutability: "view",
+  },
+  {
+    type: "function",
+    name: "computeSeed",
+    inputs: [
+      {
+        name: "loopID",
+        type: "uint256",
+        internalType: "uint256",
+      },
+    ],
+    outputs: [
+      {
+        name: "",
+        type: "bytes",
+        internalType: "bytes",
+      },
+    ],
+    stateMutability: "view",
+  },
+  {
+    type: "function",
+    name: "controllerKeyRegistered",
+    inputs: [
+      {
+        name: "",
+        type: "address",
+        internalType: "address",
+      },
+    ],
+    outputs: [
+      {
+        name: "",
+        type: "bool",
+        internalType: "bool",
+      },
+    ],
+    stateMutability: "view",
+  },
+  {
+    type: "function",
+    name: "controllerPublicKeys",
+    inputs: [
+      {
+        name: "",
+        type: "address",
+        internalType: "address",
+      },
+      {
+        name: "",
+        type: "uint256",
+        internalType: "uint256",
+      },
+    ],
+    outputs: [
+      {
+        name: "",
+        type: "uint256",
+        internalType: "uint256",
+      },
+    ],
+    stateMutability: "view",
+  },
+  {
+    type: "function",
+    name: "progressLoop",
+    inputs: [
+      {
+        name: "progressWithData",
+        type: "bytes",
+        internalType: "bytes",
+      },
+    ],
+    outputs: [],
+    stateMutability: "nonpayable",
+  },
+  {
+    type: "function",
+    name: "registerControllerKey",
+    inputs: [
+      {
+        name: "controller",
+        type: "address",
+        internalType: "address",
+      },
+      {
+        name: "pkX",
+        type: "uint256",
+        internalType: "uint256",
+      },
+      {
+        name: "pkY",
+        type: "uint256",
+        internalType: "uint256",
+      },
+    ],
+    outputs: [],
+    stateMutability: "nonpayable",
+  },
+  {
+    type: "function",
+    name: "shouldProgressLoop",
+    inputs: [],
+    outputs: [
+      {
+        name: "loopIsReady",
+        type: "bool",
+        internalType: "bool",
+      },
+      {
+        name: "progressWithData",
+        type: "bytes",
+        internalType: "bytes",
+      },
+    ],
+    stateMutability: "view",
+  },
+  {
+    type: "function",
+    name: "supportsInterface",
+    inputs: [
+      {
+        name: "interfaceId",
+        type: "bytes4",
+        internalType: "bytes4",
+      },
+    ],
+    outputs: [
+      {
+        name: "",
+        type: "bool",
+        internalType: "bool",
+      },
+    ],
+    stateMutability: "view",
+  },
+  {
+    type: "event",
+    name: "ControllerKeyRegistered",
+    inputs: [
+      {
+        name: "controller",
+        type: "address",
+        indexed: true,
+        internalType: "address",
+      },
+      {
+        name: "pkX",
+        type: "uint256",
+        indexed: false,
+        internalType: "uint256",
+      },
+      {
+        name: "pkY",
+        type: "uint256",
+        indexed: false,
+        internalType: "uint256",
+      },
+    ],
+    anonymous: false,
+  },
+  {
+    type: "event",
+    name: "HybridVRFTick",
+    inputs: [
+      {
+        name: "loopID",
+        type: "uint256",
+        indexed: true,
+        internalType: "uint256",
+      },
+      {
+        name: "randomness",
+        type: "bytes32",
+        indexed: false,
+        internalType: "bytes32",
+      },
+      {
+        name: "timestamp",
+        type: "uint256",
+        indexed: false,
+        internalType: "uint256",
+      },
+    ],
+    anonymous: false,
+  },
+  {
+    type: "event",
+    name: "StandardTick",
+    inputs: [
+      {
+        name: "loopID",
+        type: "uint256",
+        indexed: true,
+        internalType: "uint256",
+      },
+      {
+        name: "timestamp",
+        type: "uint256",
+        indexed: false,
+        internalType: "uint256",
+      },
+    ],
+    anonymous: false,
+  },
+  {
+    type: "event",
+    name: "VRFRandomnessVerified",
+    inputs: [
+      {
+        name: "loopID",
+        type: "uint256",
+        indexed: true,
+        internalType: "uint256",
+      },
+      {
+        name: "randomness",
+        type: "bytes32",
+        indexed: false,
+        internalType: "bytes32",
+      },
+      {
+        name: "controller",
+        type: "address",
+        indexed: true,
+        internalType: "address",
+      },
+    ],
+    anonymous: false,
+  },
+] as const;

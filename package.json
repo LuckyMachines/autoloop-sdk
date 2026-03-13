@@ -1,6 +1,6 @@
 {
   "name": "@luckymachines/autoloop-sdk",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "TypeScript SDK for interacting with AutoLoop contracts",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

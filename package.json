@@ -14,7 +14,8 @@
     "registry:staging": "node scripts/registry-config.cjs staging",
     "registry:prod": "node scripts/registry-config.cjs prod",
     "registry:ping": "node scripts/registry-config.cjs ping",
-    "publish:registry": "node scripts/publish-registry.cjs"
+    "publish:registry": "node scripts/publish-registry.cjs",
+    "check": "npm run build && npm audit --omit=dev --audit-level=high"
   },
   "peerDependencies": {
     "viem": ">=2.0.0"
